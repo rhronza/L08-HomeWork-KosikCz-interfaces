@@ -24,6 +24,9 @@ public class Product {
 	@Column(name = "price")
 	private float price;
 	
+	@Column(name="productId")
+	private String productId;
+	
 	@Column(name = "insertedTimeStamp")
 	private LocalDateTime insertedTimeStamp;
 
@@ -56,6 +59,14 @@ public class Product {
 		this.price = price;
 	}
 
+	public String getProductId() {
+		return productId;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+
 	public LocalDateTime getInsertedTimeStamp() {
 		return insertedTimeStamp;
 	}
@@ -71,16 +82,10 @@ public class Product {
 	public void setUpdatedTimeStamp(LocalDateTime updatedTimeStamp) {
 		this.updatedTimeStamp = updatedTimeStamp;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", insertedTimeStamp=" + insertedTimeStamp
-				+ ", updatedTimeStamp=" + updatedTimeStamp + "]";
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
+				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
-
-	
-
-
-
-	
 }

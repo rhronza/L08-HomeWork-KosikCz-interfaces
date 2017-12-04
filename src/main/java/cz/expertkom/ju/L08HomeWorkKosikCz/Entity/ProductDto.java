@@ -10,6 +10,7 @@ public class ProductDto {
 	private Long id;
 	private String name;
 	private float price;
+	private String productId;
 	private LocalDateTime insertedTimeStamp;
 	private LocalDateTime updatedTimeStamp;
 	/* -------------------------------------------- */
@@ -31,6 +32,12 @@ public class ProductDto {
 	public void setPrice(float price) {
 		this.price = price;
 	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
 	public LocalDateTime getInsertedTimeStamp() {
 		return insertedTimeStamp;
 	}
@@ -45,10 +52,9 @@ public class ProductDto {
 	}
 	@Override
 	public String toString() {
-		return "ProductDto [id=" + id + ", name=" + name + ", price=" + price + ", insertedTimeStamp="
-				+ insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
+		return "ProductDto [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
+				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
-	
 	
 	
 	
