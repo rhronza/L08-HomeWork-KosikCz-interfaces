@@ -11,6 +11,7 @@ public class ProductDto {
 	private String name;
 	private float price;
 	private String productId;
+	private int iterationStepProcessed;
 	private LocalDateTime insertedTimeStamp;
 	private LocalDateTime updatedTimeStamp;
 	/* -------------------------------------------- */
@@ -38,6 +39,14 @@ public class ProductDto {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
+	
+	public int getIterationStepProcessed() {
+		return iterationStepProcessed;
+	}
+	public void setIterationStepProcessed(int iterationStepProcessed) {
+		this.iterationStepProcessed = iterationStepProcessed;
+	}
+
 	public LocalDateTime getInsertedTimeStamp() {
 		return insertedTimeStamp;
 	}
@@ -50,15 +59,13 @@ public class ProductDto {
 	public void setUpdatedTimeStamp(LocalDateTime updatedTimeStamp) {
 		this.updatedTimeStamp = updatedTimeStamp;
 	}
+	
 	@Override
 	public String toString() {
 		return "ProductDto [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
-				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
+				+ ", iterationStepProcessed=" + iterationStepProcessed + ", insertedTimeStamp=" + insertedTimeStamp
+				+ ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
-	
-	
-	
-	
 }
 
 	

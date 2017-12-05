@@ -13,6 +13,10 @@ public interface ProductDbServices {
 	public void	updateProduct(Long id, ProductDto productdto);
 	public Products getAllOrderByprice();
 	public Products getAllBetweenPrice(float priceFrom, float priceTo);
+	public Products getProductsPerName(String nameProduct);
+	public void setAllIterationStepsProcessedDown();
+	public int getCountNonProcessedProduct();
+	public int getCountProcessedProduct();
 	
 		
 

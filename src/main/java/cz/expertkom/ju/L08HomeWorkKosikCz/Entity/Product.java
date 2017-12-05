@@ -26,6 +26,9 @@ public class Product {
 	
 	@Column(name="productId")
 	private String productId;
+
+	@Column(name="iterationStepProcessed")
+	private int iterationStepProcessed;
 	
 	@Column(name = "insertedTimeStamp")
 	private LocalDateTime insertedTimeStamp;
@@ -66,6 +69,14 @@ public class Product {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
+	
+	public int getIterationStepProcessed() {
+		return iterationStepProcessed;
+	}
+
+	public void setIterationStepProcessed(int iterationStepProcessed) {
+		this.iterationStepProcessed = iterationStepProcessed;
+	}
 
 	public LocalDateTime getInsertedTimeStamp() {
 		return insertedTimeStamp;
@@ -86,6 +97,12 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
-				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
+				+ ", iterationStepProcessed=" + iterationStepProcessed + ", insertedTimeStamp=" + insertedTimeStamp
+				+ ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
+
+	
+	
+	
+	
 }
