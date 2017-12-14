@@ -1,6 +1,7 @@
 package cz.expertkom.ju.L08HomeWorkKosikCz.Entity;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -10,9 +11,10 @@ public class ProductDto {
 	private Long id;
 	private String name;
 	private float price;
+	private float priceAfterDiscount;
 	private String productId;
 	private int iterationStepProcessed;
-	private LocalDateTime insertedTimeStamp;
+	private Calendar insertedTimeStamp;
 	private LocalDateTime updatedTimeStamp;
 	/* -------------------------------------------- */
 	public Long getId() {
@@ -47,10 +49,10 @@ public class ProductDto {
 		this.iterationStepProcessed = iterationStepProcessed;
 	}
 
-	public LocalDateTime getInsertedTimeStamp() {
+	public Calendar getInsertedTimeStamp() {
 		return insertedTimeStamp;
 	}
-	public void setInsertedTimeStamp(LocalDateTime insertedTimeStamp) {
+	public void setInsertedTimeStamp(Calendar insertedTimeStamp) {
 		this.insertedTimeStamp = insertedTimeStamp;
 	}
 	public LocalDateTime getUpdatedTimeStamp() {
@@ -59,13 +61,21 @@ public class ProductDto {
 	public void setUpdatedTimeStamp(LocalDateTime updatedTimeStamp) {
 		this.updatedTimeStamp = updatedTimeStamp;
 	}
-	
+	public float getPriceAfterDiscount() {
+		return priceAfterDiscount;
+	}
+	public void setPriceAfterDiscount(float priceAfterDiscount) {
+		this.priceAfterDiscount = priceAfterDiscount;
+	}
 	@Override
 	public String toString() {
-		return "ProductDto [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
-				+ ", iterationStepProcessed=" + iterationStepProcessed + ", insertedTimeStamp=" + insertedTimeStamp
-				+ ", updatedTimeStamp=" + updatedTimeStamp + "]";
+		return "ProductDto [id=" + id + ", name=" + name + ", price=" + price + ", priceAfterDiscount="
+				+ priceAfterDiscount + ", productId=" + productId + ", iterationStepProcessed=" + iterationStepProcessed
+				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
+	
+	
+	
 }
 
 	

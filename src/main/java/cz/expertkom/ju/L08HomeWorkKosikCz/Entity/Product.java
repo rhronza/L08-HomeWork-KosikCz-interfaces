@@ -1,6 +1,7 @@
 package cz.expertkom.ju.L08HomeWorkKosikCz.Entity;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,6 +24,9 @@ public class Product {
 	
 	@Column(name = "price")
 	private float price;
+
+	@Column(name = "priceAfterDiscount")
+	private float priceAfterDiscount;
 	
 	@Column(name="productId")
 	private String productId;
@@ -31,7 +35,8 @@ public class Product {
 	private int iterationStepProcessed;
 	
 	@Column(name = "insertedTimeStamp")
-	private LocalDateTime insertedTimeStamp;
+	//private LocalDateTime insertedTimeStamp;
+	private Calendar insertedTimeStamp;
 
 	@Column(name = "updatedTimeStamp")
 	private LocalDateTime updatedTimeStamp;
@@ -78,11 +83,11 @@ public class Product {
 		this.iterationStepProcessed = iterationStepProcessed;
 	}
 
-	public LocalDateTime getInsertedTimeStamp() {
+	public Calendar getInsertedTimeStamp() {
 		return insertedTimeStamp;
 	}
 
-	public void setInsertedTimeStamp(LocalDateTime insertedTimeStamp) {
+	public void setInsertedTimeStamp(Calendar insertedTimeStamp) {
 		this.insertedTimeStamp = insertedTimeStamp;
 	}
 
@@ -94,13 +99,22 @@ public class Product {
 		this.updatedTimeStamp = updatedTimeStamp;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", productId=" + productId
-				+ ", iterationStepProcessed=" + iterationStepProcessed + ", insertedTimeStamp=" + insertedTimeStamp
-				+ ", updatedTimeStamp=" + updatedTimeStamp + "]";
+	public float getPriceAfterDiscount() {
+		return priceAfterDiscount;
 	}
 
+	public void setPriceAfterDiscount(float priceAfterDiscount) {
+		this.priceAfterDiscount = priceAfterDiscount;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", priceAfterDiscount="
+				+ priceAfterDiscount + ", productId=" + productId + ", iterationStepProcessed=" + iterationStepProcessed
+				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
+	}
+
+	
 	
 	
 	
