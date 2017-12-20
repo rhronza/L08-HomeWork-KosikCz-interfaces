@@ -17,6 +17,8 @@ public interface ProductDbServices {
 	public void setAllIterationStepsProcessedDown();
 	public int getCountNonProcessedProduct();
 	public int getCountProcessedProduct();
+	public long countProducts();
+	
 	
 		
 
