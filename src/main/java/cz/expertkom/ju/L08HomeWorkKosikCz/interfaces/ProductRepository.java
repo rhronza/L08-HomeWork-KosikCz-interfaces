@@ -33,15 +33,20 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 	@Query(value="select count(*) from Product pr where pr.iterationStepProcessed = 1 and pr.updatedTimeStamp is not null ", nativeQuery = false)
 	int getCountProcessedProduct();
 	
+	/* vrací počet produktů v tabulce */
 	@Query(value="select count(*) from Product", nativeQuery=false)
 	long countProducts();
-	
 	
 	/* nastaví hodnotu atributu iterationStepProcessed na 0 */
 	@Modifying
 	@Transactional
-	@Query ("update Product pr set pr.iterationStepProcessed=0")
+	@Query (value="update Product pr set pr.iterationStepProcessed=0", nativeQuery=false)
 	int setAllIterationStepsProccesedDown();
+	
+	/* vrací seznam produktů v jejichž názvu je zadaný text */ 
+	@Query(value="select pr from Product pr where pr.name like %?1% ", nativeQuery=false)
+	List<Product> findProductsPartName(String txt);
 	
 
 }
+ 
