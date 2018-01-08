@@ -10,9 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 
 @Entity
 @Table(name="productsKosik")
+//@Data
+
 public class Product {
 
 	@Id
@@ -40,8 +44,6 @@ public class Product {
 
 	@Column(name = "updatedTimeStamp")
 	private LocalDateTime updatedTimeStamp;
-	
-	/* ------------------------------------------------------------- */
 
 	public Long getId() {
 		return id;
@@ -67,6 +69,14 @@ public class Product {
 		this.price = price;
 	}
 
+	public float getPriceAfterDiscount() {
+		return priceAfterDiscount;
+	}
+
+	public void setPriceAfterDiscount(float priceAfterDiscount) {
+		this.priceAfterDiscount = priceAfterDiscount;
+	}
+
 	public String getProductId() {
 		return productId;
 	}
@@ -74,7 +84,7 @@ public class Product {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
-	
+
 	public int getIterationStepProcessed() {
 		return iterationStepProcessed;
 	}
@@ -99,24 +109,15 @@ public class Product {
 		this.updatedTimeStamp = updatedTimeStamp;
 	}
 
-	public float getPriceAfterDiscount() {
-		return priceAfterDiscount;
-	}
-
-	public void setPriceAfterDiscount(float priceAfterDiscount) {
-		this.priceAfterDiscount = priceAfterDiscount;
-	}
-
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", priceAfterDiscount="
 				+ priceAfterDiscount + ", productId=" + productId + ", iterationStepProcessed=" + iterationStepProcessed
 				+ ", insertedTimeStamp=" + insertedTimeStamp + ", updatedTimeStamp=" + updatedTimeStamp + "]";
 	}
+	
+	
+	
+	
 
-	
-	
-	
-	
-	
 }
