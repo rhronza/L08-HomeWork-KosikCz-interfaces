@@ -7,7 +7,6 @@ import cz.expertkom.ju.L08HomeWorkKosikCz.Entity.ProductDto;
 import cz.expertkom.ju.L08HomeWorkKosikCz.Entity.Products;
 
 public interface ProductDbServices {
-	
 	public Products getAll();
 	public Products getOne(Long id);
 	public ProductDto getOne2(Long id);
@@ -22,10 +21,4 @@ public interface ProductDbServices {
 	public int getCountNonProcessedProduct();
 	public int getCountProcessedProduct();
 	public long countProducts();
-	
-	
-	
-	
-		
-
 }

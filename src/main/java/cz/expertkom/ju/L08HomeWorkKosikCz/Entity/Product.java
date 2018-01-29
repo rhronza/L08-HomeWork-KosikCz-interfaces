@@ -10,13 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
-
 @Entity
 @Table(name="productsKosik")
-//@Data
-
 public class Product {
 
 	@Id
