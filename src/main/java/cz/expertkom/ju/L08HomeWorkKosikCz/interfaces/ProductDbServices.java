@@ -1,8 +1,5 @@
 package cz.expertkom.ju.L08HomeWorkKosikCz.interfaces;
 
-import java.util.List;
-
-import cz.expertkom.ju.L08HomeWorkKosikCz.Entity.Product;
 import cz.expertkom.ju.L08HomeWorkKosikCz.Entity.ProductDto;
 import cz.expertkom.ju.L08HomeWorkKosikCz.Entity.Products;
 

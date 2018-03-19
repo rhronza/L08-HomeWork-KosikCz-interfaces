@@ -48,6 +48,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 	@Query(value="select pr from Product pr where pr.name like %?1% ", nativeQuery=false)
 	List<Product> findProductsPartName(String txt);
 	
+	@Query(value="select `name` from `products_kosik` where `name` like \"%tuk%\" AND `name` NOT LIKE \"%mléko%\" ", nativeQuery=true)
+	List<String> doSelect();
+	
 
 }
  
